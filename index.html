@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Sekolah | SMP NEGERI 1 KAIS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container grid-nav">
+        <span class="logo">SMP NEGERI 1 KAIS</span>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Tentang</a></li>
+            <li><a href="#">Akademik</a></li>
+            <li>
+              <a href="#" onclick="showPage('pendaftaran')">Pendaftaran</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <li><a href="#" onclick="showPage('pendaftaran')">Pendaftaran</a></li>
+
+    <main>
+      <div id="home-page">
+        <section class="hero">
+          <div class="hero-content container">
+            <h1>Membangun Generasi Cerdas & Berkarakter</h1>
+            <p>Selamat Datang di Portal Resmi SMP Negeri 1 Kais.</p>
+            <a href="#" class="btn" onclick="showPage('pendaftaran')"
+              >Daftar Sekarang</a
+            >
+          </div>
+        </section>
+
+        <section class="info-section">
+          <div class="container info-grid">
+            <div class="card">
+              <h3>Fasilitas</h3>
+              <p>Laboratorium lengkap.</p>
+            </div>
+            <div class="card">
+              <h3>Guru</h3>
+              <p>Tenaga profesional.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div id="pendaftaran-page" style="display: none">
+        <section class="container" style="padding: 100px 20px">
+          <button
+            onclick="showPage('home')"
+            style="margin-bottom: 20px; cursor: pointer"
+          >
+            ← Kembali ke Beranda
+          </button>
+
+          <div class="form-pendaftaran">
+            <h2 id="form-title">Pendaftaran Siswa Baru</h2>
+            <form id="registrationForm">
+              <input type="hidden" id="editIndex" />
+              <input
+                type="text"
+                id="nama"
+                placeholder="Nama Lengkap"
+                required
+                style="width: 100%; padding: 10px; margin-bottom: 10px"
+              />
+              <input
+                type="email"
+                id="email"
+                placeholder="Email Aktif"
+                required
+                style="width: 100%; padding: 10px; margin-bottom: 10px"
+              />
+              <button type="submit" id="btnSimpan" class="btn">
+                Simpan Data
+              </button>
+            </form>
+          </div>
+
+          <table
+            border="1"
+            style="width: 100%; margin-top: 30px; border-collapse: collapse"
+          >
+            <thead style="background: #7fffd4">
+              <tr>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody id="resultTable"></tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <h3>Kontak Kami</h3>
+            <p>Jl. Utama Kais, Sorong Selatan</p>
+            <p>Email: info@smpn1kais.sch.id</p>
+          </div>
+          <div class="footer-links">
+            <h3>Tautan Cepat</h3>
+            <ul>
+              <li><a href="#">Berita Sekolah</a></li>
+              <li><a href="#">Galeri</a></li>
+              <li><a href="#">Kontak</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-copy">
+          <p>&copy; 2026 SMP NEGERI 1 KAIS. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
